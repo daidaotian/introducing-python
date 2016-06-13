@@ -19,6 +19,7 @@ def dryer():
 
 import multiprocessing
 DRYERS=3
-for num in range(DRYERS):
-    p = multiprocessing.Process(target=dryer)
-    p.start()
+if __name__ == '__main__':
+	for num in range(DRYERS):
+		p = multiprocessing.Process(target=dryer)
+		p.start()
